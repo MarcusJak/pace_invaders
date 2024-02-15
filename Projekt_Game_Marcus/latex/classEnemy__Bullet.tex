@@ -1,0 +1,156 @@
+\hypertarget{classEnemy__Bullet}{}\doxysection{Enemy\+\_\+\+Bullet Class Reference}
+\label{classEnemy__Bullet}\index{Enemy\_Bullet@{Enemy\_Bullet}}
+
+
+Denna klass är enemys skott som är en barn till ett skott.  
+
+
+
+
+{\ttfamily \#include $<$enemy\+\_\+bullet.\+h$>$}
+
+Inheritance diagram for Enemy\+\_\+\+Bullet\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classEnemy__Bullet}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classEnemy__Bullet_a468af4d3caf53a1b1dfbb872662b0b11}{move}} () override
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEnemy__Bullet_a7a697783f2e2346f11867a7e4a1ca596}{Enemy\+\_\+\+Bullet}} (int enemy\+Place)
+\item 
+void \mbox{\hyperlink{classEnemy__Bullet_a7cd92ae59acc66770dfe269de4da1f2b}{decrease\+Enemy\+PosV}} ()
+\begin{DoxyCompactList}\small\item\em denna funktion minskar värdet på who då en enemy har raderats ur vectorn \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEnemy__Bullet_ae14fcee3f53b95c871c02ba1c7849c7e}{get\+Enemy\+PosV}} ()
+\begin{DoxyCompactList}\small\item\em för att se vems skottet är \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Denna klass är enemys skott som är en barn till ett skott. 
+
+Definition at line \mbox{\hyperlink{enemy__bullet_8h_source_l00009}{9}} of file \mbox{\hyperlink{enemy__bullet_8h_source}{enemy\+\_\+bullet.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEnemy__Bullet_a7a697783f2e2346f11867a7e4a1ca596}\label{classEnemy__Bullet_a7a697783f2e2346f11867a7e4a1ca596}} 
+\index{Enemy\_Bullet@{Enemy\_Bullet}!Enemy\_Bullet@{Enemy\_Bullet}}
+\index{Enemy\_Bullet@{Enemy\_Bullet}!Enemy\_Bullet@{Enemy\_Bullet}}
+\doxysubsubsection{\texorpdfstring{Enemy\_Bullet()}{Enemy\_Bullet()}}
+{\footnotesize\ttfamily Enemy\+\_\+\+Bullet\+::\+Enemy\+\_\+\+Bullet (\begin{DoxyParamCaption}\item[{int}]{enemy\+Place }\end{DoxyParamCaption})}
+
+denna konstruktor sätter vilken som har skjutit samt pixel bilden 
+\begin{DoxyParams}{Parameters}
+{\em enemy\+Place} & vem som har skjutit skottet \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{enemy__bullet_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{enemy__bullet_8cpp_source}{enemy\+\_\+bullet.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007 \{}
+\DoxyCodeLine{00008     this-\/>enemyBulletPosV=enemyPlace;}
+\DoxyCodeLine{00009     setPixmap(QPixmap(\textcolor{stringliteral}{"{}/home/marcus/game1/874fa0e5bf7b854.png"{}}));}
+\DoxyCodeLine{00010     \mbox{\hyperlink{classbullets_a2a53a63c214dfa57241d7e51217fc030}{bullets::timerStart}}(20);}
+\DoxyCodeLine{00011 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEnemy__Bullet_a7cd92ae59acc66770dfe269de4da1f2b}\label{classEnemy__Bullet_a7cd92ae59acc66770dfe269de4da1f2b}} 
+\index{Enemy\_Bullet@{Enemy\_Bullet}!decreaseEnemyPosV@{decreaseEnemyPosV}}
+\index{decreaseEnemyPosV@{decreaseEnemyPosV}!Enemy\_Bullet@{Enemy\_Bullet}}
+\doxysubsubsection{\texorpdfstring{decreaseEnemyPosV()}{decreaseEnemyPosV()}}
+{\footnotesize\ttfamily void Enemy\+\_\+\+Bullet\+::decrease\+Enemy\+PosV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+denna funktion minskar värdet på who då en enemy har raderats ur vectorn 
+
+
+
+Definition at line \mbox{\hyperlink{enemy__bullet_8cpp_source_l00014}{14}} of file \mbox{\hyperlink{enemy__bullet_8cpp_source}{enemy\+\_\+bullet.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00015 \{}
+\DoxyCodeLine{00016 enemyBulletPosV-\/-\/;}
+\DoxyCodeLine{00017 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEnemy__Bullet_ae14fcee3f53b95c871c02ba1c7849c7e}\label{classEnemy__Bullet_ae14fcee3f53b95c871c02ba1c7849c7e}} 
+\index{Enemy\_Bullet@{Enemy\_Bullet}!getEnemyPosV@{getEnemyPosV}}
+\index{getEnemyPosV@{getEnemyPosV}!Enemy\_Bullet@{Enemy\_Bullet}}
+\doxysubsubsection{\texorpdfstring{getEnemyPosV()}{getEnemyPosV()}}
+{\footnotesize\ttfamily int Enemy\+\_\+\+Bullet\+::get\+Enemy\+PosV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+för att se vems skottet är 
+
+
+
+Definition at line \mbox{\hyperlink{enemy__bullet_8cpp_source_l00019}{19}} of file \mbox{\hyperlink{enemy__bullet_8cpp_source}{enemy\+\_\+bullet.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019                               \{}
+\DoxyCodeLine{00020     \textcolor{keywordflow}{return} enemyBulletPosV;}
+\DoxyCodeLine{00021 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEnemy__Bullet_a468af4d3caf53a1b1dfbb872662b0b11}\label{classEnemy__Bullet_a468af4d3caf53a1b1dfbb872662b0b11}} 
+\index{Enemy\_Bullet@{Enemy\_Bullet}!move@{move}}
+\index{move@{move}!Enemy\_Bullet@{Enemy\_Bullet}}
+\doxysubsubsection{\texorpdfstring{move}{move}}
+{\footnotesize\ttfamily void Enemy\+\_\+\+Bullet\+::move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}, {\ttfamily [slot]}}
+
+denna funktion gör så att enemy skottet rör sig. och håller koll på om skottet träffar en spelare eller en spelares skott, samt om skottet har åkt ur bild 
+
+Definition at line \mbox{\hyperlink{enemy__bullet_8cpp_source_l00024}{24}} of file \mbox{\hyperlink{enemy__bullet_8cpp_source}{enemy\+\_\+bullet.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00025 \{}
+\DoxyCodeLine{00026     setPos(x()-\/20,y());}
+\DoxyCodeLine{00027     QList<QGraphicsItem *> list = collidingItems();}
+\DoxyCodeLine{00028     \textcolor{keywordflow}{foreach}(QGraphicsItem * i , list)}
+\DoxyCodeLine{00029     \{}
+\DoxyCodeLine{00030         \textcolor{keywordflow}{if} (i==game-\/>\mbox{\hyperlink{classGame_a41754409fb1cf615469f42480e6910c8}{obj}}-\/>player)}
+\DoxyCodeLine{00031         \{}
+\DoxyCodeLine{00032             game-\/>\mbox{\hyperlink{classGame_a41754409fb1cf615469f42480e6910c8}{obj}}-\/>\mbox{\hyperlink{classstoreObjects_ab32f215753e766b02b5165ef5ecd0a94}{vEnemy}}[enemyBulletPosV]-\/>bulletHit(\textcolor{keyword}{this});}
+\DoxyCodeLine{00033             game-\/>\mbox{\hyperlink{classGame_a69644917fce9a0421a307fd100c5b380}{stats}}-\/>\mbox{\hyperlink{classStats_a0d83e8b185dff689a9c43841180d39da}{hp}}-\/>\mbox{\hyperlink{classhealth_a4c3365074f57bb34974d766b4d011a60}{decrease}}();}
+\DoxyCodeLine{00034             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00035         \}}
+\DoxyCodeLine{00036         \mbox{\hyperlink{classplay__Bullet}{play\_Bullet}} * item= \textcolor{keyword}{dynamic\_cast<}\mbox{\hyperlink{classplay__Bullet}{play\_Bullet}} *\textcolor{keyword}{>}(i);}
+\DoxyCodeLine{00037         \textcolor{keywordflow}{if}(item)}
+\DoxyCodeLine{00038         \{}
+\DoxyCodeLine{00039             game-\/>\mbox{\hyperlink{classGame_a41754409fb1cf615469f42480e6910c8}{obj}}-\/>\mbox{\hyperlink{classstoreObjects_ab32f215753e766b02b5165ef5ecd0a94}{vEnemy}}[enemyBulletPosV]-\/>bulletHit(\textcolor{keyword}{this});}
+\DoxyCodeLine{00040             game-\/>\mbox{\hyperlink{classGame_a41754409fb1cf615469f42480e6910c8}{obj}}-\/>player-\/>\mbox{\hyperlink{classPlayer_a809cf3335602011ac66a2135e98c53ac}{bulletRemove}}(item);}
+\DoxyCodeLine{00041             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00042         \}}
+\DoxyCodeLine{00043     \}}
+\DoxyCodeLine{00044 }
+\DoxyCodeLine{00045      \textcolor{keywordflow}{if}(pos().x()<0)}
+\DoxyCodeLine{00046      \{}
+\DoxyCodeLine{00047          game-\/>\mbox{\hyperlink{classGame_a41754409fb1cf615469f42480e6910c8}{obj}}-\/>\mbox{\hyperlink{classstoreObjects_ab32f215753e766b02b5165ef5ecd0a94}{vEnemy}}[enemyBulletPosV]-\/>bulletHit(\textcolor{keyword}{this});}
+\DoxyCodeLine{00048      \}}
+\DoxyCodeLine{00049 }
+\DoxyCodeLine{00050 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+enemy\+\_\+bullet.\+h\item 
+enemy\+\_\+bullet.\+cpp\end{DoxyCompactItemize}

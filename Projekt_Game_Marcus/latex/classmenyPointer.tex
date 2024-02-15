@@ -1,0 +1,100 @@
+\hypertarget{classmenyPointer}{}\doxysection{meny\+Pointer Class Reference}
+\label{classmenyPointer}\index{menyPointer@{menyPointer}}
+Inheritance diagram for meny\+Pointer\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmenyPointer}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classmenyPointer_a90e5da7c1992baf32d87a11aa0bf243e}{key\+Press\+Event}} (QKey\+Event $\ast$event)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{menypointer_8h_source_l00008}{8}} of file \mbox{\hyperlink{menypointer_8h_source}{menypointer.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmenyPointer_a7b33f83a23acbbe4be1e1cb5c0c9a60f}\label{classmenyPointer_a7b33f83a23acbbe4be1e1cb5c0c9a60f}} 
+\index{menyPointer@{menyPointer}!menyPointer@{menyPointer}}
+\index{menyPointer@{menyPointer}!menyPointer@{menyPointer}}
+\doxysubsubsection{\texorpdfstring{menyPointer()}{menyPointer()}}
+{\footnotesize\ttfamily meny\+Pointer\+::meny\+Pointer (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{menypointer_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{menypointer_8cpp_source}{menypointer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008 \{}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{00010     setPixmap(QPixmap(\textcolor{stringliteral}{"{}/home/marcus/game1/bilder/pointer.png"{}}));}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012     meny=\textcolor{keyword}{true};}
+\DoxyCodeLine{00013 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmenyPointer_a90e5da7c1992baf32d87a11aa0bf243e}\label{classmenyPointer_a90e5da7c1992baf32d87a11aa0bf243e}} 
+\index{menyPointer@{menyPointer}!keyPressEvent@{keyPressEvent}}
+\index{keyPressEvent@{keyPressEvent}!menyPointer@{menyPointer}}
+\doxysubsubsection{\texorpdfstring{keyPressEvent()}{keyPressEvent()}}
+{\footnotesize\ttfamily void meny\+Pointer\+::key\+Press\+Event (\begin{DoxyParamCaption}\item[{QKey\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{menypointer_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{menypointer_8cpp_source}{menypointer.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016 \{}
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{00018     \textcolor{keywordflow}{if}(event-\/>key()==Qt::Key\_Left)}
+\DoxyCodeLine{00019     \{}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{00021         setPos(0,150);}
+\DoxyCodeLine{00022 }
+\DoxyCodeLine{00023     \}}
+\DoxyCodeLine{00024     \textcolor{keywordflow}{if}(event-\/>key()==Qt::Key\_Up)}
+\DoxyCodeLine{00025     \{}
+\DoxyCodeLine{00026         setPos(0,150);}
+\DoxyCodeLine{00027         meny=\textcolor{keyword}{true};}
+\DoxyCodeLine{00028 }
+\DoxyCodeLine{00029     \}}
+\DoxyCodeLine{00030     \textcolor{keywordflow}{if}(event-\/>key()==Qt::Key\_Down)}
+\DoxyCodeLine{00031     \{}
+\DoxyCodeLine{00032         setPos(0,500);}
+\DoxyCodeLine{00033         meny=\textcolor{keyword}{false};}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{00035     \}}
+\DoxyCodeLine{00036     \textcolor{keywordflow}{if}(event-\/>key()==Qt::Key\_Space)}
+\DoxyCodeLine{00037     \{}
+\DoxyCodeLine{00038         \textcolor{keywordflow}{if}(meny)}
+\DoxyCodeLine{00039         \{}
+\DoxyCodeLine{00040             qDebug()<<\textcolor{stringliteral}{"{}new!"{}};}
+\DoxyCodeLine{00041             game-\/>newGame();}
+\DoxyCodeLine{00042         \}}
+\DoxyCodeLine{00043         \textcolor{keywordflow}{else}}
+\DoxyCodeLine{00044         \{}
+\DoxyCodeLine{00045             exit(3);}
+\DoxyCodeLine{00046         \}}
+\DoxyCodeLine{00047 }
+\DoxyCodeLine{00048     \}}
+\DoxyCodeLine{00049 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+menypointer.\+h\item 
+menypointer.\+cpp\end{DoxyCompactItemize}

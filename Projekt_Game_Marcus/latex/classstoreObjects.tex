@@ -1,0 +1,202 @@
+\hypertarget{classstoreObjects}{}\doxysection{store\+Objects Class Reference}
+\label{classstoreObjects}\index{storeObjects@{storeObjects}}
+
+
+denna klass håller spelaren samt alla enemys  
+
+
+
+
+{\ttfamily \#include $<$storeobjects.\+h$>$}
+
+Inheritance diagram for store\+Objects\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classstoreObjects}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classstoreObjects_aaae9f936bbf8c4712bcdac91e3170e73}{spawn}} ()
+\begin{DoxyCompactList}\small\item\em spawnar enemys \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classstoreObjects_a9fa9a4f9efa351f2cc61dc49a384bcae}{store\+Objects}} ()
+\begin{DoxyCompactList}\small\item\em denna default konstruktor sätter ihop timern ifrån game med spawn funktionen \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstoreObjects_a1269f3bac973fb029def7e0c36c13011}{remove\+All\+Bullets}} ()
+\begin{DoxyCompactList}\small\item\em Tar bort alla bullets både spelaren och enemys. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classstoreObjects_a35f33eebfa0d2475864ef2ac0be1f086}{enemy\+Remove}} ()
+\begin{DoxyCompactList}\small\item\em tar bort alla enemys \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classPlayer}{Player}} $\ast$ \mbox{\hyperlink{classstoreObjects_a3e180d085ffd6041679b3798fc04042a}{player}}
+\item 
+\mbox{\hyperlink{classEnemy}{Enemy}} $\ast$ \mbox{\hyperlink{classstoreObjects_a302a5854497738e0d85c86e4bd701fb8}{enemy}}
+\begin{DoxyCompactList}\small\item\em enemy objectet \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classEnemy}{Enemy}} $\ast$ $>$ \mbox{\hyperlink{classstoreObjects_ab32f215753e766b02b5165ef5ecd0a94}{v\+Enemy}}
+\begin{DoxyCompactList}\small\item\em denna vector håller alla enemys \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+denna klass håller spelaren samt alla enemys 
+
+Definition at line \mbox{\hyperlink{storeobjects_8h_source_l00010}{10}} of file \mbox{\hyperlink{storeobjects_8h_source}{storeobjects.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classstoreObjects_a9fa9a4f9efa351f2cc61dc49a384bcae}\label{classstoreObjects_a9fa9a4f9efa351f2cc61dc49a384bcae}} 
+\index{storeObjects@{storeObjects}!storeObjects@{storeObjects}}
+\index{storeObjects@{storeObjects}!storeObjects@{storeObjects}}
+\doxysubsubsection{\texorpdfstring{storeObjects()}{storeObjects()}}
+{\footnotesize\ttfamily store\+Objects\+::store\+Objects (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+denna default konstruktor sätter ihop timern ifrån game med spawn funktionen 
+
+
+
+Definition at line \mbox{\hyperlink{storeobjects_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{storeobjects_8cpp_source}{storeobjects.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006 \{}
+\DoxyCodeLine{00007     connect(game-\/>\mbox{\hyperlink{classGame_a715c03c30ff43ce78269f4d888b0c123}{timerEnemySpawn}}, \&QTimer::timeout,\textcolor{keyword}{this},\&\mbox{\hyperlink{classstoreObjects_aaae9f936bbf8c4712bcdac91e3170e73}{storeObjects::spawn}});}
+\DoxyCodeLine{00008 }
+\DoxyCodeLine{00009 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classstoreObjects_a35f33eebfa0d2475864ef2ac0be1f086}\label{classstoreObjects_a35f33eebfa0d2475864ef2ac0be1f086}} 
+\index{storeObjects@{storeObjects}!enemyRemove@{enemyRemove}}
+\index{enemyRemove@{enemyRemove}!storeObjects@{storeObjects}}
+\doxysubsubsection{\texorpdfstring{enemyRemove()}{enemyRemove()}}
+{\footnotesize\ttfamily void store\+Objects\+::enemy\+Remove (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+tar bort alla enemys 
+
+
+
+Definition at line \mbox{\hyperlink{storeobjects_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{storeobjects_8cpp_source}{storeobjects.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033 \{}
+\DoxyCodeLine{00034   \mbox{\hyperlink{classstoreObjects_ab32f215753e766b02b5165ef5ecd0a94}{vEnemy}}[0]-\/>removeBullets();}
+\DoxyCodeLine{00035   \mbox{\hyperlink{classstoreObjects_ab32f215753e766b02b5165ef5ecd0a94}{vEnemy}}.erase(\mbox{\hyperlink{classstoreObjects_ab32f215753e766b02b5165ef5ecd0a94}{vEnemy}}.begin());}
+\DoxyCodeLine{00036   std::for\_each(\mbox{\hyperlink{classstoreObjects_ab32f215753e766b02b5165ef5ecd0a94}{vEnemy}}.begin(),\mbox{\hyperlink{classstoreObjects_ab32f215753e766b02b5165ef5ecd0a94}{vEnemy}}.end(),[\&]( \mbox{\hyperlink{classEnemy}{Enemy}}* \mbox{\hyperlink{classstoreObjects_a302a5854497738e0d85c86e4bd701fb8}{enemy}})}
+\DoxyCodeLine{00037   \{}
+\DoxyCodeLine{00038       enemy-\/>decreaseEnemyPosV();}
+\DoxyCodeLine{00039       \}}
+\DoxyCodeLine{00040   );}
+\DoxyCodeLine{00041 }
+\DoxyCodeLine{00042 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classstoreObjects_a1269f3bac973fb029def7e0c36c13011}\label{classstoreObjects_a1269f3bac973fb029def7e0c36c13011}} 
+\index{storeObjects@{storeObjects}!removeAllBullets@{removeAllBullets}}
+\index{removeAllBullets@{removeAllBullets}!storeObjects@{storeObjects}}
+\doxysubsubsection{\texorpdfstring{removeAllBullets()}{removeAllBullets()}}
+{\footnotesize\ttfamily void store\+Objects\+::remove\+All\+Bullets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Tar bort alla bullets både spelaren och enemys. 
+
+
+
+Definition at line \mbox{\hyperlink{storeobjects_8cpp_source_l00018}{18}} of file \mbox{\hyperlink{storeobjects_8cpp_source}{storeobjects.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00019 \{}
+\DoxyCodeLine{00020     player-\/>\mbox{\hyperlink{classPlayer_ac233e275bd43f7d0f88d229bd336d70e}{removeBullets}}();}
+\DoxyCodeLine{00021 }
+\DoxyCodeLine{00022     std::for\_each(\mbox{\hyperlink{classstoreObjects_ab32f215753e766b02b5165ef5ecd0a94}{vEnemy}}.begin(),\mbox{\hyperlink{classstoreObjects_ab32f215753e766b02b5165ef5ecd0a94}{vEnemy}}.end(),[\&]( \mbox{\hyperlink{classEnemy}{Enemy}}* \mbox{\hyperlink{classstoreObjects_a302a5854497738e0d85c86e4bd701fb8}{enemy}})}
+\DoxyCodeLine{00023     \{}
+\DoxyCodeLine{00024         enemy-\/>removeBullets();}
+\DoxyCodeLine{00025         delete enemy;}
+\DoxyCodeLine{00026         \}}
+\DoxyCodeLine{00027     );}
+\DoxyCodeLine{00028     \mbox{\hyperlink{classstoreObjects_ab32f215753e766b02b5165ef5ecd0a94}{vEnemy}}.clear();}
+\DoxyCodeLine{00029 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classstoreObjects_aaae9f936bbf8c4712bcdac91e3170e73}\label{classstoreObjects_aaae9f936bbf8c4712bcdac91e3170e73}} 
+\index{storeObjects@{storeObjects}!spawn@{spawn}}
+\index{spawn@{spawn}!storeObjects@{storeObjects}}
+\doxysubsubsection{\texorpdfstring{spawn}{spawn}}
+{\footnotesize\ttfamily void store\+Objects\+::spawn (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+spawnar enemys 
+
+
+
+Definition at line \mbox{\hyperlink{storeobjects_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{storeobjects_8cpp_source}{storeobjects.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012 \{}
+\DoxyCodeLine{00013             \mbox{\hyperlink{classEnemy}{Enemy}} * \mbox{\hyperlink{classstoreObjects_a302a5854497738e0d85c86e4bd701fb8}{enemy}}= \textcolor{keyword}{new} \mbox{\hyperlink{classEnemy}{Enemy}}(\mbox{\hyperlink{classstoreObjects_ab32f215753e766b02b5165ef5ecd0a94}{vEnemy}}.size());}
+\DoxyCodeLine{00014             \mbox{\hyperlink{classstoreObjects_ab32f215753e766b02b5165ef5ecd0a94}{vEnemy}}.push\_back(\mbox{\hyperlink{classstoreObjects_a302a5854497738e0d85c86e4bd701fb8}{enemy}});}
+\DoxyCodeLine{00015             game-\/>\mbox{\hyperlink{classGame_a8119e3b9a632906c6808fa294b46a92a}{scene}}-\/>addItem(\mbox{\hyperlink{classstoreObjects_a302a5854497738e0d85c86e4bd701fb8}{enemy}});}
+\DoxyCodeLine{00016 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classstoreObjects_a302a5854497738e0d85c86e4bd701fb8}\label{classstoreObjects_a302a5854497738e0d85c86e4bd701fb8}} 
+\index{storeObjects@{storeObjects}!enemy@{enemy}}
+\index{enemy@{enemy}!storeObjects@{storeObjects}}
+\doxysubsubsection{\texorpdfstring{enemy}{enemy}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classEnemy}{Enemy}}$\ast$ store\+Objects\+::enemy}
+
+
+
+enemy objectet 
+
+
+
+Definition at line \mbox{\hyperlink{storeobjects_8h_source_l00018}{18}} of file \mbox{\hyperlink{storeobjects_8h_source}{storeobjects.\+h}}.
+
+\mbox{\Hypertarget{classstoreObjects_a3e180d085ffd6041679b3798fc04042a}\label{classstoreObjects_a3e180d085ffd6041679b3798fc04042a}} 
+\index{storeObjects@{storeObjects}!player@{player}}
+\index{player@{player}!storeObjects@{storeObjects}}
+\doxysubsubsection{\texorpdfstring{player}{player}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classPlayer}{Player}}$\ast$ store\+Objects\+::player}
+
+
+
+Definition at line \mbox{\hyperlink{storeobjects_8h_source_l00016}{16}} of file \mbox{\hyperlink{storeobjects_8h_source}{storeobjects.\+h}}.
+
+\mbox{\Hypertarget{classstoreObjects_ab32f215753e766b02b5165ef5ecd0a94}\label{classstoreObjects_ab32f215753e766b02b5165ef5ecd0a94}} 
+\index{storeObjects@{storeObjects}!vEnemy@{vEnemy}}
+\index{vEnemy@{vEnemy}!storeObjects@{storeObjects}}
+\doxysubsubsection{\texorpdfstring{vEnemy}{vEnemy}}
+{\footnotesize\ttfamily std\+::vector$<$\mbox{\hyperlink{classEnemy}{Enemy}}$\ast$$>$ store\+Objects\+::v\+Enemy}
+
+
+
+denna vector håller alla enemys 
+
+
+
+Definition at line \mbox{\hyperlink{storeobjects_8h_source_l00020}{20}} of file \mbox{\hyperlink{storeobjects_8h_source}{storeobjects.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+storeobjects.\+h\item 
+storeobjects.\+cpp\end{DoxyCompactItemize}

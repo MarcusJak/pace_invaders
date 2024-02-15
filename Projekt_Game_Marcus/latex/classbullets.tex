@@ -1,0 +1,95 @@
+\hypertarget{classbullets}{}\doxysection{bullets Class Reference}
+\label{classbullets}\index{bullets@{bullets}}
+
+
+det här är en klass för bullets både för player och enemy.  
+
+
+
+
+{\ttfamily \#include $<$bullets.\+h$>$}
+
+Inheritance diagram for bullets\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=3.000000cm]{classbullets}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{classbullets_a184bd5482b89af3248fc9d1d98554dbd}\label{classbullets_a184bd5482b89af3248fc9d1d98554dbd}} 
+virtual void {\bfseries move} ()=0
+\begin{DoxyCompactList}\small\item\em move funktionen som rör sig utifrån om det är ett enemy eller player skott \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classbullets_aa15c314a7031e80ba9c228b3a5b360b5}{$\sim$bullets}} ()
+\begin{DoxyCompactList}\small\item\em denna destructor disconnectar move funktionen och timer, samt stoppar timern \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classbullets_a2a53a63c214dfa57241d7e51217fc030}{timer\+Start}} (int time)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+det här är en klass för bullets både för player och enemy. 
+
+Definition at line \mbox{\hyperlink{bullets_8h_source_l00007}{7}} of file \mbox{\hyperlink{bullets_8h_source}{bullets.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classbullets_aa15c314a7031e80ba9c228b3a5b360b5}\label{classbullets_aa15c314a7031e80ba9c228b3a5b360b5}} 
+\index{bullets@{bullets}!````~bullets@{$\sim$bullets}}
+\index{````~bullets@{$\sim$bullets}!bullets@{bullets}}
+\doxysubsubsection{\texorpdfstring{$\sim$bullets()}{~bullets()}}
+{\footnotesize\ttfamily bullets\+::$\sim$bullets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+denna destructor disconnectar move funktionen och timer, samt stoppar timern 
+
+
+
+Definition at line \mbox{\hyperlink{bullets_8cpp_source_l00005}{5}} of file \mbox{\hyperlink{bullets_8cpp_source}{bullets.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00006 \{}
+\DoxyCodeLine{00007     timer-\/>stop();}
+\DoxyCodeLine{00008     disconnect(timer, \&QTimer::timeout,\textcolor{keyword}{this},\&\mbox{\hyperlink{classbullets_a184bd5482b89af3248fc9d1d98554dbd}{bullets::move}});}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{00010 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classbullets_a2a53a63c214dfa57241d7e51217fc030}\label{classbullets_a2a53a63c214dfa57241d7e51217fc030}} 
+\index{bullets@{bullets}!timerStart@{timerStart}}
+\index{timerStart@{timerStart}!bullets@{bullets}}
+\doxysubsubsection{\texorpdfstring{timerStart()}{timerStart()}}
+{\footnotesize\ttfamily void bullets\+::timer\+Start (\begin{DoxyParamCaption}\item[{int}]{time }\end{DoxyParamCaption})}
+
+startar timern som gör så att bullets rör sig 
+\begin{DoxyParams}{Parameters}
+{\em time} & är tiden som bullet ska uppdateras med \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{bullets_8cpp_source_l00012}{12}} of file \mbox{\hyperlink{bullets_8cpp_source}{bullets.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00013 \{}
+\DoxyCodeLine{00014     timer-\/>start(time);}
+\DoxyCodeLine{00015     connect(timer, \&QTimer::timeout,\textcolor{keyword}{this},\&\mbox{\hyperlink{classbullets_a184bd5482b89af3248fc9d1d98554dbd}{bullets::move}});}
+\DoxyCodeLine{00016 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+bullets.\+h\item 
+bullets.\+cpp\end{DoxyCompactItemize}

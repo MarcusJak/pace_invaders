@@ -1,0 +1,176 @@
+\hypertarget{classhealth}{}\doxysection{health Class Reference}
+\label{classhealth}\index{health@{health}}
+
+
+denna klassen håller hp av spelaren  
+
+
+
+
+{\ttfamily \#include $<$health.\+h$>$}
+
+Inheritance diagram for health\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classhealth}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classhealth_a927ee057584f0cfced1fb0c8dd77c62f}{health}} ()
+\begin{DoxyCompactList}\small\item\em sätter antalet liv samt texten \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classhealth_af0c15a26490bed62c025ad0402da98a3}{gethp}} ()
+\begin{DoxyCompactList}\small\item\em för att få score \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classhealth_a7eaacfa2685b122931b84944d47f60f9}{sethp}} (int hp)
+\item 
+void \mbox{\hyperlink{classhealth_a82d32a2513a6ed5105b26045479d7c67}{increase}} ()
+\begin{DoxyCompactList}\small\item\em denna funktion ökar hp \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classhealth_a4c3365074f57bb34974d766b4d011a60}{decrease}} ()
+\begin{DoxyCompactList}\small\item\em denna funktion sänker hp samt kollar om spelet ska börja om \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+denna klassen håller hp av spelaren 
+
+Definition at line \mbox{\hyperlink{health_8h_source_l00011}{11}} of file \mbox{\hyperlink{health_8h_source}{health.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classhealth_a927ee057584f0cfced1fb0c8dd77c62f}\label{classhealth_a927ee057584f0cfced1fb0c8dd77c62f}} 
+\index{health@{health}!health@{health}}
+\index{health@{health}!health@{health}}
+\doxysubsubsection{\texorpdfstring{health()}{health()}}
+{\footnotesize\ttfamily health\+::health (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+sätter antalet liv samt texten 
+
+
+
+Definition at line \mbox{\hyperlink{health_8cpp_source_l00007}{7}} of file \mbox{\hyperlink{health_8cpp_source}{health.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00008 \{}
+\DoxyCodeLine{00009     hp=3;}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011     setPlainText(QString(\textcolor{stringliteral}{"{}hp: "{}}) + QString::number(hp));}
+\DoxyCodeLine{00012         setDefaultTextColor(Qt::white);}
+\DoxyCodeLine{00013 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classhealth_a4c3365074f57bb34974d766b4d011a60}\label{classhealth_a4c3365074f57bb34974d766b4d011a60}} 
+\index{health@{health}!decrease@{decrease}}
+\index{decrease@{decrease}!health@{health}}
+\doxysubsubsection{\texorpdfstring{decrease()}{decrease()}}
+{\footnotesize\ttfamily void health\+::decrease (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+denna funktion sänker hp samt kollar om spelet ska börja om 
+
+
+
+Definition at line \mbox{\hyperlink{health_8cpp_source_l00040}{40}} of file \mbox{\hyperlink{health_8cpp_source}{health.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00041 \{}
+\DoxyCodeLine{00042     hp-\/-\/;}
+\DoxyCodeLine{00043     setPlainText(QString(\textcolor{stringliteral}{"{}hp: "{}}) + QString::number(hp));}
+\DoxyCodeLine{00044     \textcolor{keywordflow}{if}(game-\/>\mbox{\hyperlink{classGame_a69644917fce9a0421a307fd100c5b380}{stats}}-\/>\mbox{\hyperlink{classStats_a0d83e8b185dff689a9c43841180d39da}{hp}}-\/>\mbox{\hyperlink{classhealth_af0c15a26490bed62c025ad0402da98a3}{gethp}}()==0)}
+\DoxyCodeLine{00045     \{}
+\DoxyCodeLine{00046         game-\/>gameRemove();}
+\DoxyCodeLine{00047         game-\/>\mbox{\hyperlink{classGame_a2ac60abcf930ee84ea40dc76d2d08391}{gameMeny}}();}
+\DoxyCodeLine{00048         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00049     \}}
+\DoxyCodeLine{00050 }
+\DoxyCodeLine{00051 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classhealth_af0c15a26490bed62c025ad0402da98a3}\label{classhealth_af0c15a26490bed62c025ad0402da98a3}} 
+\index{health@{health}!gethp@{gethp}}
+\index{gethp@{gethp}!health@{health}}
+\doxysubsubsection{\texorpdfstring{gethp()}{gethp()}}
+{\footnotesize\ttfamily int health\+::gethp (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+för att få score 
+
+
+
+Definition at line \mbox{\hyperlink{health_8cpp_source_l00015}{15}} of file \mbox{\hyperlink{health_8cpp_source}{health.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00016 \{}
+\DoxyCodeLine{00017     \textcolor{keywordflow}{return} hp;}
+\DoxyCodeLine{00018 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classhealth_a82d32a2513a6ed5105b26045479d7c67}\label{classhealth_a82d32a2513a6ed5105b26045479d7c67}} 
+\index{health@{health}!increase@{increase}}
+\index{increase@{increase}!health@{health}}
+\doxysubsubsection{\texorpdfstring{increase()}{increase()}}
+{\footnotesize\ttfamily void health\+::increase (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+denna funktion ökar hp 
+
+
+
+Definition at line \mbox{\hyperlink{health_8cpp_source_l00032}{32}} of file \mbox{\hyperlink{health_8cpp_source}{health.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00033 \{}
+\DoxyCodeLine{00034     hp++;}
+\DoxyCodeLine{00035     setPlainText(QString(\textcolor{stringliteral}{"{}hp: "{}}) + QString::number(hp));}
+\DoxyCodeLine{00036 }
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classhealth_a7eaacfa2685b122931b84944d47f60f9}\label{classhealth_a7eaacfa2685b122931b84944d47f60f9}} 
+\index{health@{health}!sethp@{sethp}}
+\index{sethp@{sethp}!health@{health}}
+\doxysubsubsection{\texorpdfstring{sethp()}{sethp()}}
+{\footnotesize\ttfamily void health\+::sethp (\begin{DoxyParamCaption}\item[{int}]{hp }\end{DoxyParamCaption})}
+
+för att sätta hp 
+\begin{DoxyParams}{Parameters}
+{\em hp} & hur mycket hp som skall sättas \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{health_8cpp_source_l00020}{20}} of file \mbox{\hyperlink{health_8cpp_source}{health.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00021 \{}
+\DoxyCodeLine{00022     this-\/>hp=hp;}
+\DoxyCodeLine{00023     setPlainText(QString(\textcolor{stringliteral}{"{}hp: "{}}) + QString::number(hp));}
+\DoxyCodeLine{00024     \textcolor{keywordflow}{if}(hp==0)}
+\DoxyCodeLine{00025     \{}
+\DoxyCodeLine{00026         game-\/>gameRemove();}
+\DoxyCodeLine{00027         game-\/>\mbox{\hyperlink{classGame_a2ac60abcf930ee84ea40dc76d2d08391}{gameMeny}}();}
+\DoxyCodeLine{00028         \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00029     \}}
+\DoxyCodeLine{00030 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+health.\+h\item 
+health.\+cpp\end{DoxyCompactItemize}

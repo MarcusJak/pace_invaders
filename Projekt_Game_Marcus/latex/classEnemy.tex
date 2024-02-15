@@ -1,0 +1,310 @@
+\hypertarget{classEnemy}{}\doxysection{Enemy Class Reference}
+\label{classEnemy}\index{Enemy@{Enemy}}
+
+
+Själva enemy skapelsen samt där skottet skapas.  
+
+
+
+
+{\ttfamily \#include $<$enemy.\+h$>$}
+
+Inheritance diagram for Enemy\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classEnemy}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classEnemy_a9a398f8d12234f02563b27440aff7891}{move}} ()
+\item 
+void \mbox{\hyperlink{classEnemy_a08e8bd93e1381f2606ccc63cb46a1ae9}{shoot}} ()
+\begin{DoxyCompactList}\small\item\em denna funktion skapar ett skott \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classEnemy_a4c97b55a05dd79aeca98c5f58532d283}{Enemy}} (int enemy\+Place)
+\item 
+void \mbox{\hyperlink{classEnemy_af639f9d0f18d185c9f44eb8e5624bc8b}{bullet\+Hit}} (\mbox{\hyperlink{classEnemy__Bullet}{Enemy\+\_\+\+Bullet}} $\ast$hit)
+\item 
+void \mbox{\hyperlink{classEnemy_a30f3bb6758f3defabfaacb1bfe24c9c1}{decrease\+Enemy\+PosV}} ()
+\begin{DoxyCompactList}\small\item\em sänker vart denna enemy ligger i vektorn \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classEnemy_a16733f23fdcf49111dec7a7e9b1fa45f}{get\+Enemy\+PosV}} ()
+\begin{DoxyCompactList}\small\item\em hämtar vart denna enemy ligger i enemy vektorn \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEnemy_a2e4c85a07c03dc786f1df4f3b3d6b263}{remove\+Bullets}} ()
+\begin{DoxyCompactList}\small\item\em tar bort all enemys skott \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classEnemy_abe61024efc55eebd71574783654a79fd}{not\+Visible}} ()
+\begin{DoxyCompactList}\small\item\em Denna funktion togglar visible. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QTimer $\ast$ \mbox{\hyperlink{classEnemy_aea5cd84f2b2c4007aff6eb96a6488f72}{timer\+Shoot}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Själva enemy skapelsen samt där skottet skapas. 
+
+Definition at line \mbox{\hyperlink{enemy_8h_source_l00008}{8}} of file \mbox{\hyperlink{enemy_8h_source}{enemy.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classEnemy_a4c97b55a05dd79aeca98c5f58532d283}\label{classEnemy_a4c97b55a05dd79aeca98c5f58532d283}} 
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\index{Enemy@{Enemy}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{Enemy()}{Enemy()}}
+{\footnotesize\ttfamily Enemy\+::\+Enemy (\begin{DoxyParamCaption}\item[{int}]{enemy\+Place }\end{DoxyParamCaption})}
+
+
+\begin{DoxyParams}{Parameters}
+{\em enemy\+Place} & vart enemyn ligger i vektorn \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{enemy_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{enemy_8cpp_source}{enemy.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007 \{}
+\DoxyCodeLine{00008     this-\/>enemyPosV=enemyPlace;}
+\DoxyCodeLine{00009     setPos(game-\/>\mbox{\hyperlink{classGame_a8119e3b9a632906c6808fa294b46a92a}{scene}}-\/>width(),(rand()\%700)-\/100);}
+\DoxyCodeLine{00010 }
+\DoxyCodeLine{00011     setPixmap(QPixmap(\textcolor{stringliteral}{"{}/home/marcus/game1/bilder/astriod.png"{}}));}
+\DoxyCodeLine{00012     timerMove =\textcolor{keyword}{new} QTimer();}
+\DoxyCodeLine{00013     connect(timerMove, \&QTimer::timeout,\textcolor{keyword}{this},\&\mbox{\hyperlink{classEnemy_a9a398f8d12234f02563b27440aff7891}{Enemy::move}});}
+\DoxyCodeLine{00014     timerMove-\/>start(40);}
+\DoxyCodeLine{00015 }
+\DoxyCodeLine{00016     timerShoot =\textcolor{keyword}{new} QTimer();}
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{00018     connect(timerShoot, \&QTimer::timeout,\textcolor{keyword}{this},\&\mbox{\hyperlink{classEnemy_a08e8bd93e1381f2606ccc63cb46a1ae9}{Enemy::shoot}});}
+\DoxyCodeLine{00019     timerShoot-\/>start(rand()\%600+1000);}
+\DoxyCodeLine{00020     visible=\textcolor{keyword}{true};}
+\DoxyCodeLine{00021 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEnemy_ac0eec4755e28c02688065f9657150ac3}\label{classEnemy_ac0eec4755e28c02688065f9657150ac3}} 
+\index{Enemy@{Enemy}!````~Enemy@{$\sim$Enemy}}
+\index{````~Enemy@{$\sim$Enemy}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{$\sim$Enemy()}{~Enemy()}}
+{\footnotesize\ttfamily Enemy\+::$\sim$\+Enemy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{enemy_8cpp_source_l00023}{23}} of file \mbox{\hyperlink{enemy_8cpp_source}{enemy.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00024 \{}
+\DoxyCodeLine{00025     \mbox{\hyperlink{classEnemy_a2e4c85a07c03dc786f1df4f3b3d6b263}{removeBullets}}();}
+\DoxyCodeLine{00026     timerMove-\/>stop();}
+\DoxyCodeLine{00027     timerShoot-\/>stop();}
+\DoxyCodeLine{00028     disconnect(timerShoot, \&QTimer::timeout,\textcolor{keyword}{this},\&\mbox{\hyperlink{classEnemy_a08e8bd93e1381f2606ccc63cb46a1ae9}{Enemy::shoot}});}
+\DoxyCodeLine{00029     disconnect(timerMove, \&QTimer::timeout,\textcolor{keyword}{this},\&\mbox{\hyperlink{classEnemy_a9a398f8d12234f02563b27440aff7891}{Enemy::move}});}
+\DoxyCodeLine{00030 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classEnemy_af639f9d0f18d185c9f44eb8e5624bc8b}\label{classEnemy_af639f9d0f18d185c9f44eb8e5624bc8b}} 
+\index{Enemy@{Enemy}!bulletHit@{bulletHit}}
+\index{bulletHit@{bulletHit}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{bulletHit()}{bulletHit()}}
+{\footnotesize\ttfamily void Enemy\+::bullet\+Hit (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classEnemy__Bullet}{Enemy\+\_\+\+Bullet}} $\ast$}]{hit }\end{DoxyParamCaption})}
+
+denna funktion är då ett enemy skott har träffat spelaren 
+\begin{DoxyParams}{Parameters}
+{\em hit} & vilket enemy skott som har blivit träffat \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{enemy_8cpp_source_l00064}{64}} of file \mbox{\hyperlink{enemy_8cpp_source}{enemy.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00065 \{}
+\DoxyCodeLine{00066     \textcolor{keyword}{auto} iter = std::find(vEnemyBullet.begin(), vEnemyBullet.end(), hit);}
+\DoxyCodeLine{00067     \textcolor{keywordflow}{if} (iter != vEnemyBullet.end())}
+\DoxyCodeLine{00068     \{}
+\DoxyCodeLine{00069         vEnemyBullet.erase(iter);}
+\DoxyCodeLine{00070     \}}
+\DoxyCodeLine{00071     \textcolor{keyword}{delete} hit;}
+\DoxyCodeLine{00072 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEnemy_a30f3bb6758f3defabfaacb1bfe24c9c1}\label{classEnemy_a30f3bb6758f3defabfaacb1bfe24c9c1}} 
+\index{Enemy@{Enemy}!decreaseEnemyPosV@{decreaseEnemyPosV}}
+\index{decreaseEnemyPosV@{decreaseEnemyPosV}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{decreaseEnemyPosV()}{decreaseEnemyPosV()}}
+{\footnotesize\ttfamily void Enemy\+::decrease\+Enemy\+PosV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+sänker vart denna enemy ligger i vektorn 
+
+
+
+Definition at line \mbox{\hyperlink{enemy_8cpp_source_l00074}{74}} of file \mbox{\hyperlink{enemy_8cpp_source}{enemy.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00075 \{}
+\DoxyCodeLine{00076     enemyPosV-\/-\/;}
+\DoxyCodeLine{00077     std::for\_each(vEnemyBullet.begin(),vEnemyBullet.end(),[\&]( \mbox{\hyperlink{classEnemy__Bullet}{Enemy\_Bullet}}* enemy)}
+\DoxyCodeLine{00078     \{}
+\DoxyCodeLine{00079         enemy-\/>decreaseEnemyPosV();}
+\DoxyCodeLine{00080     \});}
+\DoxyCodeLine{00081 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEnemy_a16733f23fdcf49111dec7a7e9b1fa45f}\label{classEnemy_a16733f23fdcf49111dec7a7e9b1fa45f}} 
+\index{Enemy@{Enemy}!getEnemyPosV@{getEnemyPosV}}
+\index{getEnemyPosV@{getEnemyPosV}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{getEnemyPosV()}{getEnemyPosV()}}
+{\footnotesize\ttfamily int Enemy\+::get\+Enemy\+PosV (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+hämtar vart denna enemy ligger i enemy vektorn 
+
+
+
+Definition at line \mbox{\hyperlink{enemy_8cpp_source_l00083}{83}} of file \mbox{\hyperlink{enemy_8cpp_source}{enemy.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00084 \{}
+\DoxyCodeLine{00085     \textcolor{keywordflow}{return} enemyPosV;}
+\DoxyCodeLine{00086 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEnemy_a9a398f8d12234f02563b27440aff7891}\label{classEnemy_a9a398f8d12234f02563b27440aff7891}} 
+\index{Enemy@{Enemy}!move@{move}}
+\index{move@{move}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{move}{move}}
+{\footnotesize\ttfamily void Enemy\+::move (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+denna funktion gör så att enemy rör sig. Samt kollar om enemy har krockat eller om den har åkt ur bild 
+
+Definition at line \mbox{\hyperlink{enemy_8cpp_source_l00031}{31}} of file \mbox{\hyperlink{enemy_8cpp_source}{enemy.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00032 \{}
+\DoxyCodeLine{00033     setPos(x()-\/10,y());}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{00035     QList<QGraphicsItem *> list = collidingItems();}
+\DoxyCodeLine{00036     \textcolor{keywordflow}{foreach}(QGraphicsItem * i , list)}
+\DoxyCodeLine{00037     \{}
+\DoxyCodeLine{00038         \textcolor{keywordflow}{if} (i==game-\/>\mbox{\hyperlink{classGame_a41754409fb1cf615469f42480e6910c8}{obj}}-\/>player)}
+\DoxyCodeLine{00039         \{}
+\DoxyCodeLine{00040             game-\/>\mbox{\hyperlink{classGame_a69644917fce9a0421a307fd100c5b380}{stats}}-\/>\mbox{\hyperlink{classStats_a0d83e8b185dff689a9c43841180d39da}{hp}}-\/>\mbox{\hyperlink{classhealth_a7eaacfa2685b122931b84944d47f60f9}{sethp}}(0);}
+\DoxyCodeLine{00041             \textcolor{keywordflow}{return};}
+\DoxyCodeLine{00042         \}}
+\DoxyCodeLine{00043 }
+\DoxyCodeLine{00044     \}}
+\DoxyCodeLine{00045     \textcolor{keywordflow}{if}(pos().x()<0)}
+\DoxyCodeLine{00046     \{}
+\DoxyCodeLine{00047         \textcolor{keywordflow}{if}(this-\/>visible)}
+\DoxyCodeLine{00048         \{}
+\DoxyCodeLine{00049             game-\/>\mbox{\hyperlink{classGame_a69644917fce9a0421a307fd100c5b380}{stats}}-\/>\mbox{\hyperlink{classStats_a0d83e8b185dff689a9c43841180d39da}{hp}}-\/>\mbox{\hyperlink{classhealth_a4c3365074f57bb34974d766b4d011a60}{decrease}}();}
+\DoxyCodeLine{00050         \}}
+\DoxyCodeLine{00051         game-\/>\mbox{\hyperlink{classGame_a41754409fb1cf615469f42480e6910c8}{obj}}-\/>\mbox{\hyperlink{classstoreObjects_a35f33eebfa0d2475864ef2ac0be1f086}{enemyRemove}}();}
+\DoxyCodeLine{00052         \textcolor{keyword}{delete} \textcolor{keyword}{this};}
+\DoxyCodeLine{00053 }
+\DoxyCodeLine{00054     \}}
+\DoxyCodeLine{00055 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEnemy_abe61024efc55eebd71574783654a79fd}\label{classEnemy_abe61024efc55eebd71574783654a79fd}} 
+\index{Enemy@{Enemy}!notVisible@{notVisible}}
+\index{notVisible@{notVisible}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{notVisible()}{notVisible()}}
+{\footnotesize\ttfamily void Enemy\+::not\+Visible (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Denna funktion togglar visible. 
+
+
+
+Definition at line \mbox{\hyperlink{enemy_8cpp_source_l00095}{95}} of file \mbox{\hyperlink{enemy_8cpp_source}{enemy.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00096 \{}
+\DoxyCodeLine{00097     this-\/>visible = !visible;}
+\DoxyCodeLine{00098 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEnemy_a2e4c85a07c03dc786f1df4f3b3d6b263}\label{classEnemy_a2e4c85a07c03dc786f1df4f3b3d6b263}} 
+\index{Enemy@{Enemy}!removeBullets@{removeBullets}}
+\index{removeBullets@{removeBullets}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{removeBullets()}{removeBullets()}}
+{\footnotesize\ttfamily void Enemy\+::remove\+Bullets (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+tar bort all enemys skott 
+
+
+
+Definition at line \mbox{\hyperlink{enemy_8cpp_source_l00088}{88}} of file \mbox{\hyperlink{enemy_8cpp_source}{enemy.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00088                          \{}
+\DoxyCodeLine{00089     std::for\_each(vEnemyBullet.begin(),vEnemyBullet.end(),[\&]( \mbox{\hyperlink{classbullets}{bullets}}* enemy)}
+\DoxyCodeLine{00090     \{delete enemy;\});}
+\DoxyCodeLine{00091     vEnemyBullet.clear();}
+\DoxyCodeLine{00092 \}}
+
+\end{DoxyCode}
+\mbox{\Hypertarget{classEnemy_a08e8bd93e1381f2606ccc63cb46a1ae9}\label{classEnemy_a08e8bd93e1381f2606ccc63cb46a1ae9}} 
+\index{Enemy@{Enemy}!shoot@{shoot}}
+\index{shoot@{shoot}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{shoot}{shoot}}
+{\footnotesize\ttfamily void Enemy\+::shoot (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [slot]}}
+
+
+
+denna funktion skapar ett skott 
+
+
+
+Definition at line \mbox{\hyperlink{enemy_8cpp_source_l00056}{56}} of file \mbox{\hyperlink{enemy_8cpp_source}{enemy.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00057 \{}
+\DoxyCodeLine{00058     \mbox{\hyperlink{classEnemy__Bullet}{Enemy\_Bullet}} * \mbox{\hyperlink{classEnemy_a08e8bd93e1381f2606ccc63cb46a1ae9}{shoot}}= \textcolor{keyword}{new} \mbox{\hyperlink{classEnemy__Bullet}{Enemy\_Bullet}}(enemyPosV);}
+\DoxyCodeLine{00059     \mbox{\hyperlink{classEnemy_a08e8bd93e1381f2606ccc63cb46a1ae9}{shoot}}-\/>setPos(x()-\/70,y()+125);}
+\DoxyCodeLine{00060     vEnemyBullet.push\_back(\mbox{\hyperlink{classEnemy_a08e8bd93e1381f2606ccc63cb46a1ae9}{shoot}});}
+\DoxyCodeLine{00061     scene()-\/>addItem(\mbox{\hyperlink{classEnemy_a08e8bd93e1381f2606ccc63cb46a1ae9}{shoot}});}
+\DoxyCodeLine{00062 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classEnemy_aea5cd84f2b2c4007aff6eb96a6488f72}\label{classEnemy_aea5cd84f2b2c4007aff6eb96a6488f72}} 
+\index{Enemy@{Enemy}!timerShoot@{timerShoot}}
+\index{timerShoot@{timerShoot}!Enemy@{Enemy}}
+\doxysubsubsection{\texorpdfstring{timerShoot}{timerShoot}}
+{\footnotesize\ttfamily QTimer$\ast$ Enemy\+::timer\+Shoot}
+
+
+
+Definition at line \mbox{\hyperlink{enemy_8h_source_l00025}{25}} of file \mbox{\hyperlink{enemy_8h_source}{enemy.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+enemy.\+h\item 
+enemy.\+cpp\end{DoxyCompactItemize}

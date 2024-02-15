@@ -1,0 +1,122 @@
+\hypertarget{classmeny}{}\doxysection{meny Class Reference}
+\label{classmeny}\index{meny@{meny}}
+Inheritance diagram for meny\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmeny}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmeny_a35b90264c32074759c880ddb2d76bee9}{meny}} ()
+\begin{DoxyCompactList}\small\item\em there is an external global object called game \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmeny_ab35f3070caa3fb5e36545b24a22a8182}{key\+Press\+Event}} (QKey\+Event $\ast$event)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+QGraphics\+Scene $\ast$ \mbox{\hyperlink{classmeny_a3304dafcaa42a697cb935fc5db46f279}{scene}}
+\item 
+QGraphics\+View $\ast$ \mbox{\hyperlink{classmeny_aa7d65f9a59d23be93d3053c1e4e9e07a}{view}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+
+
+Definition at line \mbox{\hyperlink{meny_8h_source_l00009}{9}} of file \mbox{\hyperlink{meny_8h_source}{meny.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmeny_a35b90264c32074759c880ddb2d76bee9}\label{classmeny_a35b90264c32074759c880ddb2d76bee9}} 
+\index{meny@{meny}!meny@{meny}}
+\index{meny@{meny}!meny@{meny}}
+\doxysubsubsection{\texorpdfstring{meny()}{meny()}}
+{\footnotesize\ttfamily meny\+::meny (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+there is an external global object called game 
+
+
+
+Definition at line \mbox{\hyperlink{meny_8cpp_source_l00008}{8}} of file \mbox{\hyperlink{meny_8cpp_source}{meny.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00009 \{}
+\DoxyCodeLine{00010     scene = \textcolor{keyword}{new} QGraphicsScene();}
+\DoxyCodeLine{00011 }
+\DoxyCodeLine{00012     \textcolor{comment}{// create a view to visualize the scene}}
+\DoxyCodeLine{00013     view = \textcolor{keyword}{new} QGraphicsView(scene);}
+\DoxyCodeLine{00014     view-\/>setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);}
+\DoxyCodeLine{00015     view-\/>setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);}
+\DoxyCodeLine{00016 }
+\DoxyCodeLine{00017 }
+\DoxyCodeLine{00018     view-\/>setFixedSize(1800,900);}
+\DoxyCodeLine{00019     scene-\/>setSceneRect(0,0,1800,900);}
+\DoxyCodeLine{00020 }
+\DoxyCodeLine{00021     setScene(scene);}
+\DoxyCodeLine{00022         setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);}
+\DoxyCodeLine{00023         setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);}
+\DoxyCodeLine{00024         setFixedSize(1800,900);}
+\DoxyCodeLine{00025         setBackgroundBrush(QBrush(QImage(\textcolor{stringliteral}{"{}/home/marcus/game1/bilder/rymd.jpg"{}})));}
+\DoxyCodeLine{00026 }
+\DoxyCodeLine{00027 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmeny_ab35f3070caa3fb5e36545b24a22a8182}\label{classmeny_ab35f3070caa3fb5e36545b24a22a8182}} 
+\index{meny@{meny}!keyPressEvent@{keyPressEvent}}
+\index{keyPressEvent@{keyPressEvent}!meny@{meny}}
+\doxysubsubsection{\texorpdfstring{keyPressEvent()}{keyPressEvent()}}
+{\footnotesize\ttfamily void meny\+::key\+Press\+Event (\begin{DoxyParamCaption}\item[{QKey\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+
+
+Definition at line \mbox{\hyperlink{meny_8cpp_source_l00029}{29}} of file \mbox{\hyperlink{meny_8cpp_source}{meny.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00030 \{}
+\DoxyCodeLine{00031     \textcolor{keywordflow}{if}(event-\/>key()==Qt::Key\_Down)}
+\DoxyCodeLine{00032     \{}
+\DoxyCodeLine{00033         game-\/>menyDone=\textcolor{keyword}{true};}
+\DoxyCodeLine{00034 }
+\DoxyCodeLine{00035     \}}
+\DoxyCodeLine{00036 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{classmeny_a3304dafcaa42a697cb935fc5db46f279}\label{classmeny_a3304dafcaa42a697cb935fc5db46f279}} 
+\index{meny@{meny}!scene@{scene}}
+\index{scene@{scene}!meny@{meny}}
+\doxysubsubsection{\texorpdfstring{scene}{scene}}
+{\footnotesize\ttfamily QGraphics\+Scene$\ast$ meny\+::scene}
+
+
+
+Definition at line \mbox{\hyperlink{meny_8h_source_l00014}{14}} of file \mbox{\hyperlink{meny_8h_source}{meny.\+h}}.
+
+\mbox{\Hypertarget{classmeny_aa7d65f9a59d23be93d3053c1e4e9e07a}\label{classmeny_aa7d65f9a59d23be93d3053c1e4e9e07a}} 
+\index{meny@{meny}!view@{view}}
+\index{view@{view}!meny@{meny}}
+\doxysubsubsection{\texorpdfstring{view}{view}}
+{\footnotesize\ttfamily QGraphics\+View$\ast$ meny\+::view}
+
+
+
+Definition at line \mbox{\hyperlink{meny_8h_source_l00015}{15}} of file \mbox{\hyperlink{meny_8h_source}{meny.\+h}}.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+meny.\+h\item 
+meny.\+cpp\end{DoxyCompactItemize}

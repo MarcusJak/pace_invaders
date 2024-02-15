@@ -1,0 +1,38 @@
+\hypertarget{enemy_8h_source}{}\doxysection{enemy.\+h}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00001}00001 \textcolor{preprocessor}{\#ifndef ENEMY\_H}}
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00002}00002 \textcolor{preprocessor}{\#define ENEMY\_H}}
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00004}00004 \textcolor{preprocessor}{\#include "{}enemy\_bullet.h"{}}}
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00005}00005 }
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00006}00006 }
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00008}\mbox{\hyperlink{classEnemy}{00008}} \textcolor{keyword}{class }\mbox{\hyperlink{classEnemy}{Enemy}}:\textcolor{keyword}{public} QObject, \textcolor{keyword}{public} QGraphicsPixmapItem}
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00009}00009 \{}
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00010}00010     Q\_OBJECT}
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00011}00011 \textcolor{keyword}{public}:}
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00013}00013     \mbox{\hyperlink{classEnemy_a4c97b55a05dd79aeca98c5f58532d283}{Enemy}}(\textcolor{keywordtype}{int} enemyPlace);}
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00014}00014     \mbox{\hyperlink{classEnemy}{\string~Enemy}}();}
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00015}00015 }
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00018}00018     \textcolor{keywordtype}{void} \mbox{\hyperlink{classEnemy_af639f9d0f18d185c9f44eb8e5624bc8b}{bulletHit}}(\mbox{\hyperlink{classEnemy__Bullet}{Enemy\_Bullet}}* hit);}
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00020}00020     \textcolor{keywordtype}{void} \mbox{\hyperlink{classEnemy_a30f3bb6758f3defabfaacb1bfe24c9c1}{decreaseEnemyPosV}}();}
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00022}00022     \textcolor{keywordtype}{int} \mbox{\hyperlink{classEnemy_a16733f23fdcf49111dec7a7e9b1fa45f}{getEnemyPosV}}();}
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00024}00024     \textcolor{keywordtype}{void} \mbox{\hyperlink{classEnemy_a2e4c85a07c03dc786f1df4f3b3d6b263}{removeBullets}}();}
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00025}00025     QTimer *timerShoot;}
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00027}00027     \textcolor{keywordtype}{void} \mbox{\hyperlink{classEnemy_abe61024efc55eebd71574783654a79fd}{notVisible}}();}
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00029}00029 \textcolor{keyword}{public} slots:}
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00032}00032     \textcolor{keywordtype}{void} \mbox{\hyperlink{classEnemy_a9a398f8d12234f02563b27440aff7891}{move}}();}
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00034}00034     \textcolor{keywordtype}{void} \mbox{\hyperlink{classEnemy_a08e8bd93e1381f2606ccc63cb46a1ae9}{shoot}}();}
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00035}00035 }
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00036}00036 \textcolor{keyword}{private}:}
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00037}00037     \textcolor{keywordtype}{int} enemyPosV;}
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00038}00038     QTimer *timerMove;}
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00039}00039     \textcolor{keywordtype}{bool} visible;}
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00040}00040     std::vector<Enemy\_Bullet*> vEnemyBullet;}
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00041}00041 }
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00043}00043 \};}
+\DoxyCodeLine{\Hypertarget{enemy_8h_source_l00044}00044 \textcolor{preprocessor}{\#endif }\textcolor{comment}{// ENEMY\_H}}
+
+\end{DoxyCode}

@@ -1,0 +1,66 @@
+\hypertarget{game_8cpp_source}{}\doxysection{game.\+cpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}game.h"{}}}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00002}00002 }
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00003}00003 }
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00004}00004 Game::Game()}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00005}00005 \{}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00006}00006     \mbox{\hyperlink{classGame_a8119e3b9a632906c6808fa294b46a92a}{scene}} = \textcolor{keyword}{new} QGraphicsScene();}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00007}00007     view = \textcolor{keyword}{new} QGraphicsView(\mbox{\hyperlink{classGame_a8119e3b9a632906c6808fa294b46a92a}{scene}});}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00008}00008     setScene(\mbox{\hyperlink{classGame_a8119e3b9a632906c6808fa294b46a92a}{scene}});}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00009}00009     setBackgroundBrush(QBrush(QImage(\textcolor{stringliteral}{"{}/home/marcus/game1/bilder/rymd.jpg"{}})));}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00010}00010 \}}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00011}00011 }
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00012}\mbox{\hyperlink{classGame_ae4ccae192dc32d67ee8c827ae2937a25}{00012}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classGame_ae4ccae192dc32d67ee8c827ae2937a25}{Game::gameSet}}()\{}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00013}00013     view-\/>setFixedSize(1800,900);}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00014}00014     \mbox{\hyperlink{classGame_a8119e3b9a632906c6808fa294b46a92a}{scene}}-\/>setSceneRect(0,0,1800,900);}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00015}00015     setFixedSize(1800,900);}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00016}00016     \mbox{\hyperlink{classGame_a715c03c30ff43ce78269f4d888b0c123}{timerEnemySpawn}} =\textcolor{keyword}{new} QTimer();}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00017}00017     \mbox{\hyperlink{classGame_a41754409fb1cf615469f42480e6910c8}{obj}}=\textcolor{keyword}{new} \mbox{\hyperlink{classstoreObjects}{storeObjects}}();}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00018}00018 }
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00019}00019     \mbox{\hyperlink{classGame_a69644917fce9a0421a307fd100c5b380}{stats}} =\textcolor{keyword}{new} \mbox{\hyperlink{classStats}{Stats}};}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00020}00020     \mbox{\hyperlink{classGame_ab6020dae204cbf3e968ebd34d9b43cc9}{start}} =\textcolor{keyword}{new} \mbox{\hyperlink{classmenyObj}{menyObj}}();}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00021}00021     \mbox{\hyperlink{classGame_acb013426d95d75e97194d1b34e891786}{exit}} =\textcolor{keyword}{new} \mbox{\hyperlink{classmenyObj}{menyObj}}();}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00022}00022     \mbox{\hyperlink{classGame_ab6020dae204cbf3e968ebd34d9b43cc9}{start}}-\/>setPixmap(QPixmap(\textcolor{stringliteral}{"{}/home/marcus/build-\/Projekt\_Game\_Marcus-\/Desktop\_Qt\_6\_2\_2\_GCC\_64bit-\/Debug/bilder/play.png"{}}));}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00023}00023     \mbox{\hyperlink{classGame_acb013426d95d75e97194d1b34e891786}{exit}}-\/>setPixmap(QPixmap(\textcolor{stringliteral}{"{}/home/marcus/build-\/Projekt\_Game\_Marcus-\/Desktop\_Qt\_6\_2\_2\_GCC\_64bit-\/Debug/bilder/end\_not.png"{}}));}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00024}00024     \mbox{\hyperlink{classGame_ab6020dae204cbf3e968ebd34d9b43cc9}{start}}-\/>setPos(500,250);}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00025}00025     \mbox{\hyperlink{classGame_acb013426d95d75e97194d1b34e891786}{exit}}-\/>setPos(500,500);}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00026}00026 }
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00027}00027 \}}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00028}00028 }
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00029}00029 }
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00030}\mbox{\hyperlink{classGame_abd22deab6aa358b98a25a90d173141d5}{00030}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classGame_abd22deab6aa358b98a25a90d173141d5}{Game::gameNew}}()}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00031}00031 \{}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00032}00032 }
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00033}00033   \mbox{\hyperlink{classGame_a8119e3b9a632906c6808fa294b46a92a}{scene}}-\/>removeItem(\mbox{\hyperlink{classGame_ab6020dae204cbf3e968ebd34d9b43cc9}{start}});}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00034}00034   \mbox{\hyperlink{classGame_a8119e3b9a632906c6808fa294b46a92a}{scene}}-\/>removeItem(\mbox{\hyperlink{classGame_acb013426d95d75e97194d1b34e891786}{exit}});}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00035}00035   \mbox{\hyperlink{classGame_a41754409fb1cf615469f42480e6910c8}{obj}}-\/>player = \textcolor{keyword}{new} \mbox{\hyperlink{classPlayer}{Player}}();}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00036}00036   \mbox{\hyperlink{classGame_a8119e3b9a632906c6808fa294b46a92a}{scene}}-\/>addItem(\mbox{\hyperlink{classGame_a41754409fb1cf615469f42480e6910c8}{obj}}-\/>player);}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00037}00037   \mbox{\hyperlink{classGame_a41754409fb1cf615469f42480e6910c8}{obj}}-\/>player-\/>setFlag(QGraphicsItem::ItemIsFocusable);}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00038}00038   \mbox{\hyperlink{classGame_a41754409fb1cf615469f42480e6910c8}{obj}}-\/>player-\/>setFocus();}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00039}00039   \mbox{\hyperlink{classGame_a715c03c30ff43ce78269f4d888b0c123}{timerEnemySpawn}}-\/>start(rand()\%1000 + 3000);}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00040}00040   \mbox{\hyperlink{classGame_a69644917fce9a0421a307fd100c5b380}{stats}}-\/>\mbox{\hyperlink{classStats_aa9ab7c42c609d3d740328d05f2e4fbb4}{deault}}();}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00041}00041   setBackgroundBrush(QBrush(QImage(\textcolor{stringliteral}{"{}/home/marcus/game1/bilder/rymd.jpg"{}})));}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00042}00042 }
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00043}00043 \}}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00044}00044 }
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00045}00045 \textcolor{keywordtype}{void} Game::gameRemove()\{}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00046}00046     \mbox{\hyperlink{classGame_a715c03c30ff43ce78269f4d888b0c123}{timerEnemySpawn}}-\/>stop();}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00047}00047     \mbox{\hyperlink{classGame_a41754409fb1cf615469f42480e6910c8}{obj}}-\/>\mbox{\hyperlink{classstoreObjects_a1269f3bac973fb029def7e0c36c13011}{removeAllBullets}}();}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00048}00048     \textcolor{keyword}{delete} \mbox{\hyperlink{classGame_a41754409fb1cf615469f42480e6910c8}{obj}}-\/>player;}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00049}00049     \mbox{\hyperlink{classGame_a69644917fce9a0421a307fd100c5b380}{stats}}-\/>\mbox{\hyperlink{classStats_ab66c6b97aa913b3cc0427200e21e68f6}{meny}}();}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00050}00050 \}}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00051}00051 }
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00052}00052 }
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00053}\mbox{\hyperlink{classGame_a2ac60abcf930ee84ea40dc76d2d08391}{00053}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classGame_a2ac60abcf930ee84ea40dc76d2d08391}{Game::gameMeny}}()}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00054}00054 \{}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00055}00055     \mbox{\hyperlink{classGame_a8119e3b9a632906c6808fa294b46a92a}{scene}}-\/>addItem(\mbox{\hyperlink{classGame_ab6020dae204cbf3e968ebd34d9b43cc9}{start}});}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00056}00056     \mbox{\hyperlink{classGame_a8119e3b9a632906c6808fa294b46a92a}{scene}}-\/>addItem(\mbox{\hyperlink{classGame_acb013426d95d75e97194d1b34e891786}{exit}});}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00057}00057     \mbox{\hyperlink{classGame_ab6020dae204cbf3e968ebd34d9b43cc9}{start}}-\/>setFlag(QGraphicsItem::ItemIsFocusable);}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00058}00058     \mbox{\hyperlink{classGame_acb013426d95d75e97194d1b34e891786}{exit}}-\/>setFlag(QGraphicsItem::ItemIsFocusable);}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00059}00059     \mbox{\hyperlink{classGame_ab6020dae204cbf3e968ebd34d9b43cc9}{start}}-\/>setFocus();}
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00060}00060 }
+\DoxyCodeLine{\Hypertarget{game_8cpp_source_l00061}00061 \}}
+
+\end{DoxyCode}

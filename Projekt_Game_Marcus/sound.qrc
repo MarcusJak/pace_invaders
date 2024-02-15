@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/new/audio">
+        <file>pang.m4a</file>
+        <file>skjut.m4a</file>
+    </qresource>
+    <qresource prefix="/new/prefix1"/>
+</RCC>

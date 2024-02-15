@@ -1,0 +1,112 @@
+\hypertarget{classmenyObj}{}\doxysection{meny\+Obj Class Reference}
+\label{classmenyObj}\index{menyObj@{menyObj}}
+
+
+denna klass är meny objektet  
+
+
+
+
+{\ttfamily \#include $<$meny\+Obj.\+h$>$}
+
+Inheritance diagram for meny\+Obj\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classmenyObj}
+\end{center}
+\end{figure}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classmenyObj_a8a97a640c6e2c2c5bd91f3174a75ba51}{meny\+Obj}} ()
+\begin{DoxyCompactList}\small\item\em default konstruktorn sätter meny vaiabeln till true då det betyder att load game är selected \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classmenyObj_ad9877b5d96cc894d3f02889d90d29f2b}{key\+Press\+Event}} (QKey\+Event $\ast$event)
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+denna klass är meny objektet 
+
+Definition at line \mbox{\hyperlink{menyObj_8h_source_l00008}{8}} of file \mbox{\hyperlink{menyObj_8h_source}{meny\+Obj.\+h}}.
+
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classmenyObj_a8a97a640c6e2c2c5bd91f3174a75ba51}\label{classmenyObj_a8a97a640c6e2c2c5bd91f3174a75ba51}} 
+\index{menyObj@{menyObj}!menyObj@{menyObj}}
+\index{menyObj@{menyObj}!menyObj@{menyObj}}
+\doxysubsubsection{\texorpdfstring{menyObj()}{menyObj()}}
+{\footnotesize\ttfamily meny\+Obj\+::meny\+Obj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+default konstruktorn sätter meny vaiabeln till true då det betyder att load game är selected 
+
+
+
+Definition at line \mbox{\hyperlink{menyObj_8cpp_source_l00006}{6}} of file \mbox{\hyperlink{menyObj_8cpp_source}{meny\+Obj.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00007 \{}
+\DoxyCodeLine{00008     game-\/>\mbox{\hyperlink{classGame_a254a9e6d48aa161db89e6f8d07a57c3d}{meny}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{00009 }
+\DoxyCodeLine{00010 \}}
+
+\end{DoxyCode}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{classmenyObj_ad9877b5d96cc894d3f02889d90d29f2b}\label{classmenyObj_ad9877b5d96cc894d3f02889d90d29f2b}} 
+\index{menyObj@{menyObj}!keyPressEvent@{keyPressEvent}}
+\index{keyPressEvent@{keyPressEvent}!menyObj@{menyObj}}
+\doxysubsubsection{\texorpdfstring{keyPressEvent()}{keyPressEvent()}}
+{\footnotesize\ttfamily void meny\+Obj\+::key\+Press\+Event (\begin{DoxyParamCaption}\item[{QKey\+Event $\ast$}]{event }\end{DoxyParamCaption})}
+
+denna funktion analyserar om du vill gå upp eller ner i menyn 
+\begin{DoxyParams}{Parameters}
+{\em event} & vilken knapp som har tryckts \\
+\hline
+\end{DoxyParams}
+
+
+Definition at line \mbox{\hyperlink{menyObj_8cpp_source_l00011}{11}} of file \mbox{\hyperlink{menyObj_8cpp_source}{meny\+Obj.\+cpp}}.
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00012 \{}
+\DoxyCodeLine{00013 }
+\DoxyCodeLine{00014     \textcolor{keywordflow}{if}(event-\/>key()==Qt::Key\_Up)}
+\DoxyCodeLine{00015     \{}
+\DoxyCodeLine{00016         game-\/>\mbox{\hyperlink{classGame_a254a9e6d48aa161db89e6f8d07a57c3d}{meny}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{00017         game-\/>\mbox{\hyperlink{classGame_ab6020dae204cbf3e968ebd34d9b43cc9}{start}}-\/>setPixmap(QPixmap(\textcolor{stringliteral}{"{}/home/marcus/build-\/Projekt\_Game\_Marcus-\/Desktop\_Qt\_6\_2\_2\_GCC\_64bit-\/Debug/bilder/play.png"{}}));}
+\DoxyCodeLine{00018         game-\/>\mbox{\hyperlink{classGame_acb013426d95d75e97194d1b34e891786}{exit}}-\/>setPixmap(QPixmap(\textcolor{stringliteral}{"{}/home/marcus/build-\/Projekt\_Game\_Marcus-\/Desktop\_Qt\_6\_2\_2\_GCC\_64bit-\/Debug/bilder/end\_not.png"{}}));}
+\DoxyCodeLine{00019     \}}
+\DoxyCodeLine{00020     \textcolor{keywordflow}{if}(event-\/>key()==Qt::Key\_Down)}
+\DoxyCodeLine{00021     \{}
+\DoxyCodeLine{00022         game-\/>\mbox{\hyperlink{classGame_a254a9e6d48aa161db89e6f8d07a57c3d}{meny}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{00023         game-\/>\mbox{\hyperlink{classGame_ab6020dae204cbf3e968ebd34d9b43cc9}{start}}-\/>setPixmap(QPixmap(\textcolor{stringliteral}{"{}/home/marcus/build-\/Projekt\_Game\_Marcus-\/Desktop\_Qt\_6\_2\_2\_GCC\_64bit-\/Debug/bilder/play\_Not.png"{}}));}
+\DoxyCodeLine{00024         game-\/>\mbox{\hyperlink{classGame_acb013426d95d75e97194d1b34e891786}{exit}}-\/>setPixmap(QPixmap(\textcolor{stringliteral}{"{}/home/marcus/build-\/Projekt\_Game\_Marcus-\/Desktop\_Qt\_6\_2\_2\_GCC\_64bit-\/Debug/bilder/end.png"{}}));}
+\DoxyCodeLine{00025 }
+\DoxyCodeLine{00026     \}}
+\DoxyCodeLine{00027     \textcolor{keywordflow}{if}(event-\/>key()==Qt::Key\_Space)}
+\DoxyCodeLine{00028     \{}
+\DoxyCodeLine{00029         \textcolor{keywordflow}{if}(game-\/>\mbox{\hyperlink{classGame_a254a9e6d48aa161db89e6f8d07a57c3d}{meny}})}
+\DoxyCodeLine{00030         \{}
+\DoxyCodeLine{00031             game-\/>\mbox{\hyperlink{classGame_abd22deab6aa358b98a25a90d173141d5}{gameNew}}();}
+\DoxyCodeLine{00032         \}}
+\DoxyCodeLine{00033         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(!game-\/>\mbox{\hyperlink{classGame_a254a9e6d48aa161db89e6f8d07a57c3d}{meny}})}
+\DoxyCodeLine{00034         \{}
+\DoxyCodeLine{00035             exit(3);}
+\DoxyCodeLine{00036         \}}
+\DoxyCodeLine{00037 }
+\DoxyCodeLine{00038     \}}
+\DoxyCodeLine{00039 \}}
+
+\end{DoxyCode}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+meny\+Obj.\+h\item 
+meny\+Obj.\+cpp\end{DoxyCompactItemize}

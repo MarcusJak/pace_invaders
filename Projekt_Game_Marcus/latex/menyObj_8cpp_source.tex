@@ -1,0 +1,44 @@
+\hypertarget{menyObj_8cpp_source}{}\doxysection{meny\+Obj.\+cpp}
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00001}00001 \textcolor{preprocessor}{\#include "{}game.h"{}}}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00002}00002 \textcolor{preprocessor}{\#include "{}menyObj.h"{}}}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00003}00003 \textcolor{preprocessor}{\#include <QKeyEvent>}}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00004}00004 }
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00005}00005 \textcolor{keyword}{extern} \mbox{\hyperlink{classGame}{Game}} *game;}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00006}\mbox{\hyperlink{classmenyObj_a8a97a640c6e2c2c5bd91f3174a75ba51}{00006}} \mbox{\hyperlink{classmenyObj_a8a97a640c6e2c2c5bd91f3174a75ba51}{menyObj::menyObj}}()}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00007}00007 \{}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00008}00008     game-\/>\mbox{\hyperlink{classGame_a254a9e6d48aa161db89e6f8d07a57c3d}{meny}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00009}00009 }
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00010}00010 \}}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00011}\mbox{\hyperlink{classmenyObj_ad9877b5d96cc894d3f02889d90d29f2b}{00011}} \textcolor{keywordtype}{void} \mbox{\hyperlink{classmenyObj_ad9877b5d96cc894d3f02889d90d29f2b}{menyObj::keyPressEvent}}(QKeyEvent *event)}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00012}00012 \{}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00013}00013 }
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00014}00014     \textcolor{keywordflow}{if}(event-\/>key()==Qt::Key\_Up)}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00015}00015     \{}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00016}00016         game-\/>\mbox{\hyperlink{classGame_a254a9e6d48aa161db89e6f8d07a57c3d}{meny}}=\textcolor{keyword}{true};}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00017}00017         game-\/>\mbox{\hyperlink{classGame_ab6020dae204cbf3e968ebd34d9b43cc9}{start}}-\/>setPixmap(QPixmap(\textcolor{stringliteral}{"{}/home/marcus/build-\/Projekt\_Game\_Marcus-\/Desktop\_Qt\_6\_2\_2\_GCC\_64bit-\/Debug/bilder/play.png"{}}));}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00018}00018         game-\/>\mbox{\hyperlink{classGame_acb013426d95d75e97194d1b34e891786}{exit}}-\/>setPixmap(QPixmap(\textcolor{stringliteral}{"{}/home/marcus/build-\/Projekt\_Game\_Marcus-\/Desktop\_Qt\_6\_2\_2\_GCC\_64bit-\/Debug/bilder/end\_not.png"{}}));}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00019}00019     \}}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00020}00020     \textcolor{keywordflow}{if}(event-\/>key()==Qt::Key\_Down)}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00021}00021     \{}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00022}00022         game-\/>\mbox{\hyperlink{classGame_a254a9e6d48aa161db89e6f8d07a57c3d}{meny}}=\textcolor{keyword}{false};}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00023}00023         game-\/>\mbox{\hyperlink{classGame_ab6020dae204cbf3e968ebd34d9b43cc9}{start}}-\/>setPixmap(QPixmap(\textcolor{stringliteral}{"{}/home/marcus/build-\/Projekt\_Game\_Marcus-\/Desktop\_Qt\_6\_2\_2\_GCC\_64bit-\/Debug/bilder/play\_Not.png"{}}));}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00024}00024         game-\/>\mbox{\hyperlink{classGame_acb013426d95d75e97194d1b34e891786}{exit}}-\/>setPixmap(QPixmap(\textcolor{stringliteral}{"{}/home/marcus/build-\/Projekt\_Game\_Marcus-\/Desktop\_Qt\_6\_2\_2\_GCC\_64bit-\/Debug/bilder/end.png"{}}));}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00025}00025 }
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00026}00026     \}}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00027}00027     \textcolor{keywordflow}{if}(event-\/>key()==Qt::Key\_Space)}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00028}00028     \{}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00029}00029         \textcolor{keywordflow}{if}(game-\/>\mbox{\hyperlink{classGame_a254a9e6d48aa161db89e6f8d07a57c3d}{meny}})}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00030}00030         \{}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00031}00031             game-\/>\mbox{\hyperlink{classGame_abd22deab6aa358b98a25a90d173141d5}{gameNew}}();}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00032}00032         \}}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00033}00033         \textcolor{keywordflow}{else} \textcolor{keywordflow}{if}(!game-\/>\mbox{\hyperlink{classGame_a254a9e6d48aa161db89e6f8d07a57c3d}{meny}})}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00034}00034         \{}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00035}00035             exit(3);}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00036}00036         \}}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00037}00037 }
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00038}00038     \}}
+\DoxyCodeLine{\Hypertarget{menyObj_8cpp_source_l00039}00039 \}}
+
+\end{DoxyCode}
